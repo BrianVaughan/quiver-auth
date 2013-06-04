@@ -1,17 +1,17 @@
 {
-  "name": "quiver-auth",
+  "name": "quake-auth",
   "version": "0.0.0",
   "description": "Single sign on for Express apps.",
-  "main": "quiver-auth.js",
+  "main": "quake-auth.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:deltaepsilon/quiver-auth.git"
+    "url": "git@github.com:deltaepsilon/quake-auth.git"
   },
   "keywords": [
-    "quiver",
+    "quake",
     "google",
     "passport",
     "oauth",
