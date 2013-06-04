@@ -20,5 +20,10 @@
     "express"
   ],
   "author": "Christopher Esplin",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "convict": "~0.3.1",
+    "express": "~3.2.6",
+    "passport": "~0.1.17"
+  }
 }
