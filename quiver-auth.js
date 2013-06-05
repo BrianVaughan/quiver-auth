@@ -18,7 +18,6 @@ passport.use(new GoogleStrategy({
   clientSecret: conf.get('google_secret'),
   callbackURL: '/quiver-auth/google/return'
 }, function(accessToken, refreshToken, profile, done) {
-  console.log('Google Strategy results', arguments);
   process.nextTick(function() {
     return done(null, profile);
   });

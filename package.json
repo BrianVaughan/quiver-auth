@@ -4,7 +4,7 @@
   "description": "Single sign on for Express apps.",
   "main": "quiver-auth.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt nodeunit"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,12 @@
     "express": "~3.2.6",
     "passport": "~0.1.17",
     "passport-google-oauth": "~0.1.5"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "supertest": "~0.7.0"
   }
 }
