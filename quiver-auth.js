@@ -16,7 +16,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
   clientID: conf.get('google_id'),
   clientSecret: conf.get('google_secret'),
-  callbackURL: '/quake-auth/google/return'
+  callbackURL: '/quiver-auth/google/return'
 }, function(accessToken, refreshToken, profile, done) {
   console.log('Google Strategy results', arguments);
   process.nextTick(function() {
@@ -42,11 +42,11 @@ passport.deserializeUser(function(obj, done) {
 
 
 //  Passport Routes
-app.get('/quake-auth/google', passport.authenticate('google', {
+app.get('/quiver-auth/google', passport.authenticate('google', {
   scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email']
 }));
 
-app.get('/quake-auth/google/return', passport.authenticate('google', { failureRedirect: conf.get('failureRedirect') }), function(req, res) {
+app.get('/quiver-auth/google/return', passport.authenticate('google', { failureRedirect: conf.get('failureRedirect') }), function(req, res) {
 	return res.redirect(conf.get('successRedirect'));
 });
 
