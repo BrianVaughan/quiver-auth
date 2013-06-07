@@ -6,6 +6,12 @@ var convict = require('convict'),
       default: "development",
       env: "NODE_ENV"
     },
+    host: {
+        doc: "Quiver host.",
+        format: "*",
+        default: 'localhost',
+        env: "QUIVER_HOST"
+    },
     port: {
       doc: "The port to bind.",
       format: "port",
