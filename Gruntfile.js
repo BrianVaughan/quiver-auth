@@ -1,18 +1,24 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
-    nodeunit: {
-      tests: 'test.js'
+    mochaTest: {
+      test: {
+        options: {
+          ui: 'tdd',
+          timeout: 5000
+        },
+        src: ['test/*.js']
+      }
     },
     watch: {
       src: {
-        files: ['quiver-auth.js', 'test.js'],
-        tasks: ['nodeunit']
+        files: ['quiver-auth.js', 'test/*', 'config/*'],
+        tasks: ['mochaTest']
       }
     }
   });
 
-  grunt.registerTask('default', ['nodeunit']);
+  grunt.registerTask('default', ['mochaTest']);
 }

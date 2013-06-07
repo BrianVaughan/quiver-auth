@@ -28,10 +28,11 @@
     "passport-google-oauth": "~0.1.5"
   },
   "devDependencies": {
-    "nodeunit": "~0.8.0",
     "grunt": "~0.4.1",
-    "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.4.4",
-    "supertest": "~0.7.0"
+    "supertest": "~0.7.0",
+    "grunt-mocha-test": "~0.4.0",
+    "mocha": "~1.10.0",
+    "chai": "~1.6.1"
   }
 }
