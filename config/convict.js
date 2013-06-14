@@ -9,13 +9,13 @@ var convict = require('convict'),
     host: {
         doc: "Quiver host.",
         format: "*",
-        default: 'localhost',
+        default: '127.0.0.1',
         env: "QUIVER_HOST"
     },
     port: {
       doc: "The port to bind.",
       format: "port",
-      default: 8080,
+      default: 9000,
       env: "QUIVER_PORT"
     },
     sessionSecret: {
