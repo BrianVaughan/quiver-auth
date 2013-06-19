@@ -5,9 +5,6 @@ module.exports = function (serialize, deserialize) {
     passport = require('passport'),
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
   app.use(express.session({ secret: conf.get('sessionSecret') }));
 
 //  Passport Config
@@ -22,7 +19,6 @@ module.exports = function (serialize, deserialize) {
     process.nextTick(function() {
       return done(null, profile);
     });
-
   }));
 
 // Passport session setup.
