@@ -6,13 +6,19 @@ var convict = require('convict'),
       default: "development",
       env: "NODE_ENV"
     },
-    host: {
+    quiver_external: {
+      doc: "Quiver external",
+      format: "*",
+      default: "https://quiver.is",
+      env: "QUIVER_EXTERNAL"
+    },
+    quiver_host: {
         doc: "Quiver host.",
-        format: "*",
+        format: "ipaddress",
         default: '127.0.0.1',
         env: "QUIVER_HOST"
     },
-    port: {
+    quiver_port: {
       doc: "The port to bind.",
       format: "port",
       default: 9000,
